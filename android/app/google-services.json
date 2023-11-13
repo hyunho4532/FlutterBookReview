@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1091623739941",
+    "project_id": "flutter-book-review-616ee",
+    "storage_bucket": "flutter-book-review-616ee.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1091623739941:android:f98866720dceaa6347d5cc",
+        "android_client_info": {
+          "package_name": "com.example.book_review"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAwDkusoIeYmzQVyEUpz3Gi3WjFtqfyGYg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
