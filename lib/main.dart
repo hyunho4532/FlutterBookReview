@@ -1,11 +1,16 @@
+import 'package:book_review/firebase_options.dart';
 import 'package:book_review/src/common/interceptor/customer_interceptor.dart';
 import 'package:book_review/src/common/model/naver_book_search_option.dart';
 import 'package:book_review/src/common/repository/naver_api_repository.dart';
 import 'package:dio/dio.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
+
   Dio dio = Dio(BaseOptions(baseUrl: 'https://openapi.naver.com'));
   dio.interceptors.add(CustomerInterceptor());
 
