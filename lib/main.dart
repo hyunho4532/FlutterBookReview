@@ -26,12 +26,13 @@ class MyApp extends StatelessWidget {
         )
       ],
 
-      child: MultiBlocProvider (
-        providers: [
-
-        ],
-
-        child: App(),
+      child: Builder (
+        builder: (context) => FutureBuilder (
+          future: context.read<NaverBookRepository>().searchBook(),
+          builder: (context, snapshot) {
+            return Container ();
+          },
+        ),
       ),
     );
   }
