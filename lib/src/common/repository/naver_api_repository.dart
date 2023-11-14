@@ -1,3 +1,4 @@
+import 'package:book_review/src/common/model/naver_book_info_results.dart';
 import 'package:book_review/src/common/model/naver_book_search_option.dart';
 import 'package:dio/dio.dart';
 
@@ -11,7 +12,6 @@ class NaverBookRepository {
     var response = await _dio.get('/v1/search/book.json',
         queryParameters: searchOption.toMap());
 
-    print(response);
-    return true;
+    return NaverBookInfoResults.fromJson(response.data);
   }
 }

@@ -35,6 +35,13 @@ class MyApp extends StatelessWidget {
           ),
 
           builder: (context, snapshot) {
+            if (snapshot.hasData) {
+              return MaterialApp (
+                home: Center (
+                  child: Text('${snapshot.data?.items?.length?? 0}'),
+                ),
+              );
+            }
             return Container ();
           },
         ),
