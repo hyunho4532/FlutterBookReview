@@ -48,6 +48,10 @@ dependencies:
 
   # 파이어베이스 설정하기
   firebase_core: ^2.22.0
+  dio: ^5.3.3
+  firebase_auth: ^4.13.0
+  cloud_firestore: ^4.13.0
+  firebase_storage: ^11.5.0
 
 dev_dependencies:
   flutter_test:
