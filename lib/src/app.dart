@@ -1,9 +1,6 @@
-import 'package:book_review/src/imsi/detail.dart';
-import 'package:book_review/src/splash/page/spalsh_page.dart';
+import 'package:book_review/src/splash/page/splash_page.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-
-import 'imsi/home.dart';
 
 class App extends StatefulWidget {
   const App({Key? key}) : super(key: key);
