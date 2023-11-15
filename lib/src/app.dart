@@ -1,4 +1,5 @@
 import 'package:book_review/src/imsi/detail.dart';
+import 'package:book_review/src/splash/page/spalsh_page.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
@@ -19,16 +20,15 @@ class _AppState extends State<App> {
   void initState() {
     super.initState();
 
-    router = GoRouter (routes: [
-      GoRoute (
-        path: '/', builder: (context, state) => const HomePage(),
-      ),
-      GoRoute (
-        path: '/detail', builder: (context, state) => const DetailPage(),
-      ),
-    ],
-
-    initialLocation: '/'
+    router = GoRouter (
+      initialLocation: '/',
+      
+      routes: [
+        GoRoute (
+            path: '/',
+            builder: (context, state) => const  SplashPage()
+        )
+      ],
     );
   }
 
