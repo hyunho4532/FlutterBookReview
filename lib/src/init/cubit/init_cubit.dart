@@ -8,7 +8,7 @@ class InitCubit extends HydratedCubit<bool> {
   }
 
   @override
-  bool fromJson(Map<String, dynamic> json) => json['value'] as bool;
+  bool fromJson(Map<String, dynamic> json) => json['state'] as bool;
 
   @override
   Map<String, bool> toJson(bool state) => {'state': state};
