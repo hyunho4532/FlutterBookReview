@@ -15,7 +15,7 @@ import 'package:path_provider/path_provider.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
-  HydratedBloc.storage = await HydratedStorage.build (
+  HydratedBloc.storage = await HydratedStorage.build(
     storageDirectory: await getApplicationDocumentsDirectory(),
   );
 
@@ -32,17 +32,17 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MultiRepositoryProvider (
+    return MultiRepositoryProvider(
       providers: [
-        RepositoryProvider (
+        RepositoryProvider(
           create: (context) => NaverBookRepository(dio),
         )
       ],
-
-      child: MultiBlocProvider (
+      child: MultiBlocProvider(
         providers: [
+          BlocProvider(create: (context) => SplashCubit(), lazy: false),
           BlocProvider(create: (context) => AppDataLoadCubit(), lazy: false),
-          BlocProvider(create: (context) => SplashCubit())
+          BlocProvider(create: (context) => SplashCubit()),
         ],
 
         child: const App(),

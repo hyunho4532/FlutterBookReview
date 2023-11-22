@@ -1,4 +1,5 @@
 import 'package:book_review/src/init/page/init_page.dart';
+import 'package:book_review/src/root/page/root_page.dart';
 import 'package:book_review/src/splash/page/splash_page.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
@@ -24,7 +25,7 @@ class _AppState extends State<App> {
       routes: [
         GoRoute (
             path: '/',
-            builder: (context, state) => const SplashPage(),
+            builder: (context, state) => const RootPage(),
         ),
 
         GoRoute (
