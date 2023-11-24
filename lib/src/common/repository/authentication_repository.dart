@@ -24,6 +24,6 @@ class AuthenticationRepository {
       idToken: googleAuth?.idToken,
     );
 
-    return await FirebaseAuth.instance.signInWithCredential(credential);
+    return _firebaseAuth.signInWithCredential(credential);
   }
 }
